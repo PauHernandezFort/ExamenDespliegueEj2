@@ -65,7 +65,7 @@ $result = $conn->query($sql);
     </style>
 </head>
 <body>
-    <h1>Pinacoteca</h1>
+    <h1>Pinacoteceea</h1>
 
     <!-- Mostrar los cuadros -->
     <table>
