@@ -76,7 +76,7 @@ $result = $conn->query($sql);
                 <th>Autor</th>
                 <th>Año</th>
                 <th>Periodo</th>
-                <th>Ubicación</th>
+                <th>Ubicaweeción</th>
                 <th>Imagen</th>
                 <th>Acciones</th>
             </tr>
