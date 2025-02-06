@@ -1,0 +1,40 @@
+services:
+ web:
+ image: php:examen
+ container_name: contenedorApache
+ ports:
+ - "8080:80"
+ volumes:
+ - C:\xampp\htdocs\test:/var/www/html/pinacoteca
+ networks:
+ - red1
+ db:
+ image: mariadb:examen
+ container_name: contenedorMariaDB
+ environment:
+ MYSQL_ROOT_PASSWORD: pinacoteca1234
+ MYSQL_DATABASE: pinacoteca1234
+ MYSQL_USER: davinci
+ MYSQL_PASSWORD: davinci1234
+ volumes:
+ - db_data:/var/lib/mysql
+ networks:
+ - red1
+ phpmyadmin:
+ image: phpmyadmin/phpmyadmin:latest
+ container_name: contenedorPhpMyAdmin
+ environment:
+ PMA_HOST: db
+ MYSQL_ROOT_PASSWORD: contrasenyaRoot
+ ports:
+ - "8081:80"
+ depends_on:
+ - db
+ networks:
+ - red1
+volumes:
+ db_data:
+ name: db_data
+networks:
+ red1:
+ name: red1
