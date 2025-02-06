@@ -8,7 +8,7 @@ $dbname = "pinacoteca";
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
+    die("Conexión fallieeda: " . $conn->connect_error);
 }
 
 // Manejar el borrado de un cuadro
